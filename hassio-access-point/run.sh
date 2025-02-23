@@ -56,6 +56,7 @@ DNSMASQ_CONFIG_OVERRIDE=$(bashio::config 'dnsmasq_config_override' )
 DEFAULT_ROUTE_INTERFACE=$(ip route show default | awk '/^default/ { print $5 }')
 
 echo "Starting Hass.io Access Point Addon"
+echo "Default route interface is: $($DEFAULT_ROUTE_INTERFACE)"
 
 # Setup interface
 logger "# Setup interface:" 1
